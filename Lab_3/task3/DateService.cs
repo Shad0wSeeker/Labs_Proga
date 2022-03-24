@@ -8,16 +8,18 @@ namespace task3
 {
     public class DateService
     {
-        public static void GetDay(string date)
+        public static String GetDay(string date)
         {
             DateTime dateValue = DateTime.Parse(date);
-            Console.WriteLine(dateValue.ToString("dddd"));
+            return dateValue.ToString("dddd");
+            //Console.WriteLine(dateValue.ToString("dddd"));
         }
 
-        public static void GetDaysSpan(int day, int month, int year)
+        public static int GetDaysSpan(int day, int month, int year, int day_1, int month_1, int year_1)
         {
-            TimeSpan span = new DateTime(year, month, day) - DateTime.UtcNow;
-            Console.WriteLine(span.Days);
+            TimeSpan span = new DateTime(year, month, day) - new DateTime(year_1, month_1, day_1);
+            return span.Days;
+            //Console.WriteLine(span.Days);
         }
     }
 }
