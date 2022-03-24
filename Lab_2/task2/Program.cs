@@ -13,22 +13,22 @@ namespace task2
             answer_2 = "На границе";
             answer_3 = "Нет";
 
-            if (Math.Sqrt(x * x + y * y) < 15)
+            if ((x * x + y * y) < 225)
             {
                 return answer_1;
                 
             }
-            else if (Math.Sqrt(x * x + y * y) == 15)
+            else if ((x * x + y * y) == 225)
             {
                 return answer_2;
                 
             }
-            else if (Math.Sqrt(x * x + y * y) > 25)
+            else if ((x * x + y * y) > 625)
             {
                 return answer_1;
                 
             }
-            else if (Math.Sqrt(x * x + y * y) == 25)
+            else if ((x * x + y * y) == 625)
             {
                 return answer_2;
                 
